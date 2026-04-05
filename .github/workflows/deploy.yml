@@ -1,0 +1,18 @@
+name: Deploy to ai-trading
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  deploy:
+    name: Deploy to ai-trading
+    runs-on: [self-hosted, ai-trading]
+    timeout-minutes: 30
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Run deploy script
+        run: /opt/trading/deploy.sh
+        timeout-minutes: 25
