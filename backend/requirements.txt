@@ -43,7 +43,7 @@ langchain-ollama==0.2.2
 pandas==2.2.3
 numpy==2.2.0
 ta==0.11.0           # technical analysis indicators
-pandas-ta==0.3.14b   # extended technical analysis
+pandas-ta==0.4.71b0  # extended technical analysis
 
 # --- Validation ---
 pydantic==2.10.4
