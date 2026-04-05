@@ -1,12 +1,13 @@
-FROM python:3.12-slim
+FROM python:3.12
 
 # Set working directory
 WORKDIR /app
 
-# System deps
+# System deps for building wheels + PostgreSQL
 RUN apt-get update && apt-get install -y --no-install-recommends \
     build-essential \
     libpq-dev \
+    gcc \
     && rm -rf /var/lib/apt/lists/*
 
 # Install Python dependencies
