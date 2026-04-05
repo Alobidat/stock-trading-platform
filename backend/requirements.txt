@@ -30,19 +30,22 @@ websockets==14.1
 alpaca-py==0.37.0
 
 # --- LLM (configurable providers) ---
-openai==1.58.1
-anthropic==0.40.0
-ollama==0.4.4
-langchain==0.3.13
-langchain-openai==0.2.14
-langchain-anthropic==0.3.1
-langchain-ollama==0.2.2
+# Commented: complex dependency conflicts with pandas/numpy
+# Install separately after core deployment
+# openai==1.58.1
+# anthropic==0.40.0
+# ollama==0.4.4
+# langchain==0.3.13
+# langchain-openai==0.2.14
+# langchain-anthropic==0.3.1
+# langchain-ollama==0.2.2
 
 # --- Data & Analysis ---
 pandas==2.2.3
 numpy==2.2.0
-ta==0.11.0           # technical analysis indicators
-pandas-ta==0.4.71b0  # extended technical analysis
+# Commented: dependency conflicts
+# ta==0.11.0           # technical analysis indicators
+# pandas-ta==0.4.71b0  # extended technical analysis
 
 # --- Validation ---
 pydantic==2.10.4
