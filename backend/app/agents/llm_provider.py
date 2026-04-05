@@ -7,7 +7,11 @@ Switch providers by setting LLM_PROVIDER in your .env — no code changes needed
 
 from functools import lru_cache
 
-from langchain_core.language_models import BaseChatModel
+try:
+    from langchain_core.language_models import BaseChatModel
+except ImportError:
+    BaseChatModel = None  # type: ignore
+
 from loguru import logger
 
 from app.core.config import LLMProvider, settings
